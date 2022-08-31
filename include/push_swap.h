@@ -6,7 +6,7 @@
 /*   By: jmorneau <jmorneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 19:33:00 by jmorneau          #+#    #+#             */
-/*   Updated: 2022/08/31 15:37:39 by jmorneau         ###   ########.fr       */
+/*   Updated: 2022/08/31 17:34:05 by jmorneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ typedef struct s_node	t_node;
 t_node	*creat_new_node(int value);
 void	insert_at_head(t_node **head, t_node *node_to_insert);
 int		error_arguments(int argc, char **argv);
-bool	checkifsorted(t_node **head);
 int		sizeofchainedlist(t_node *headA);
 int		smallestnumber(t_node *headA);
 int		biggestnumber(t_node *headA);
@@ -36,11 +35,13 @@ int		find_next(t_node **headA, int i);
 int		find_next_number(t_node **headA);
 int		*t_node2int(t_node *head, int lenght);
 int		*calcluechunck(t_node **head_a, int sizeofhead_a);
+bool	checkifsorted(t_node **head);
 
 // SORTS
 
 t_node	*sortarray(int argc, char **argv);
-void	sortarray100(t_node **headA, t_node **headB, int sizeofchunck);
+void	sortarray100(t_node **headA, t_node **headB);
+void	sortarray500(t_node **headA, t_node **headB);
 
 // ACTIONS
 

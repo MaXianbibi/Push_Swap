@@ -1,12 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
+/*   sort500.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jmorneau <jmorneau@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/31 17:28:19 by jmorneau          #+#    #+#             */
+/*   Updated: 2022/08/31 17:38:28 by jmorneau         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
 /*   sort100.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmorneau <jmorneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 19:53:09 by jmorneau          #+#    #+#             */
-/*   Updated: 2022/08/31 17:38:07 by jmorneau         ###   ########.fr       */
+/*   Updated: 2022/08/31 17:27:40 by jmorneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +46,10 @@ static void	hold_first(t_node **head_a, t_node **head_b,
 	static int	n = 1;
 
 	i = 0;
-	max_number = sorted_array[((((t / 5) * n) + t % 5)) - 1];
+	max_number = sorted_array[((((t / 11) * n) + t % 11)) - 1];
 	if (n == 1)
-		i -= t % 5;
-	while (*head_a != NULL && i < (t / 5))
+		i -= t % 11;
+	while (*head_a != NULL && i < (t / 11))
 	{
 		if ((*head_a)->value <= max_number)
 		{
@@ -55,7 +67,7 @@ static void	hold_seconde(t_node **head_a, t_node **head_b, int t)
 	int	i;
 
 	i = 0;
-	while (*head_b != NULL && i < (t / 5))
+	while (*head_b != NULL && i < (t / 11))
 	{
 		if ((*head_b)->value == biggestnumber(*head_b))
 		{
@@ -78,7 +90,7 @@ static void	hold_seconde(t_node **head_a, t_node **head_b, int t)
 	}
 }
 
-void	sortarray100(t_node **head_a, t_node **head_b)
+void	sortarray500(t_node **head_a, t_node **head_b)
 {
 	int	sizeofhead_a;
 	int	*sorted_array;

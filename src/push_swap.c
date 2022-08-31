@@ -6,7 +6,7 @@
 /*   By: jmorneau <jmorneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 19:32:13 by jmorneau          #+#    #+#             */
-/*   Updated: 2022/08/29 17:40:07 by jmorneau         ###   ########.fr       */
+/*   Updated: 2022/08/31 17:33:52 by jmorneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int	main(int argc, char **argv)
 	char	**list_of_number;
 	char	*tmp;
 
+	head = NULL;
 	if (argc == 1)
 		return (0);
 	list_of_number = argv;

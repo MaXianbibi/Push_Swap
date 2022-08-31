@@ -6,7 +6,7 @@
 /*   By: jmorneau <jmorneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 19:59:09 by jmorneau          #+#    #+#             */
-/*   Updated: 2022/08/31 15:41:59 by jmorneau         ###   ########.fr       */
+/*   Updated: 2022/08/31 17:41:05 by jmorneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ void	sortarray5(t_node **head_a, t_node **head_b)
 	int	chunck;
 	int	*sorted_array;
 
-	sorted_array = calcluechunck(head_a, sizeofchainedlist(*head_a));
 	chainedlist_l = sizeofchainedlist(*head_a);
+	sorted_array = calcluechunck(head_a, chainedlist_l);
 	chunck = sorted_array[2];
 	while (sizeofchainedlist(*head_a) > 3)
 	{
@@ -49,6 +49,7 @@ void	sortarray5(t_node **head_a, t_node **head_b)
 		rb(head_b);
 	while (*head_b != NULL)
 		pa(head_a, head_b);
+	free(sorted_array);
 }
 
 t_node	*sortarray(int argc, char **argv)
@@ -69,8 +70,8 @@ t_node	*sortarray(int argc, char **argv)
 	else if (argc <= 6)
 		sortarray5(&head_a, &head_b);
 	else if (argc <= 101)
-		sortarray100(&head_a, &head_b, 5);
+		sortarray100(&head_a, &head_b);
 	else
-		sortarray100(&head_a, &head_b, 11);
+		sortarray500(&head_a, &head_b);
 	return (head_a);
 }

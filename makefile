@@ -6,7 +6,7 @@
 #    By: jmorneau <jmorneau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/20 20:45:07 by gbelange          #+#    #+#              #
-#    Updated: 2022/08/31 16:03:46 by jmorneau         ###   ########.fr        #
+#    Updated: 2022/08/31 17:32:52 by jmorneau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ OBJS = $(SRC_FILES:.c=.o)
 SRC_DIR = src/
 
 SRC_FILES =	./src/push_swap.c ./src/sort_arrays.c ./src/push_swap_utiles.c ./src/error_arguements.c \
-			./src/Action_a.c ./src/Action_b.c ./src/push_swap_utiles2.c ./src/sort100.c \
+			./src/Action_a.c ./src/Action_b.c ./src/push_swap_utiles2.c ./src/sort100.c ./src/sort500.c\
 			
 
 all: $(NAME)
