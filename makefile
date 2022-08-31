@@ -6,7 +6,7 @@
 #    By: jmorneau <jmorneau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/20 20:45:07 by gbelange          #+#    #+#              #
-#    Updated: 2022/08/08 19:23:20 by jmorneau         ###   ########.fr        #
+#    Updated: 2022/08/31 16:03:46 by jmorneau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,8 +31,9 @@ $(NAME): $(OBJS)
 	@cp libft/libft.a .
 	@mv libft.a $(NAME)
 	@ar rcs $(NAME) $(OBJS)
-	gcc $(CFLAGS) push_swap.a
-	mv a.out push_swap
+	@gcc $(CFLAGS) push_swap.a
+	@mv a.out push_swap
+	@rm push_swap.a
 
 clean:
 	@$(RM) src/*.o
